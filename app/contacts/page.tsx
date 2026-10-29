@@ -108,10 +108,10 @@ export default function ContactsPage() {
         <div className="relative overflow-hidden rounded-2xl border border-border bg-surface">
           <div
             aria-hidden
-            className="absolute inset-0 opacity-[0.04]"
+            className="absolute inset-0 opacity-[0.06]"
             style={{
               backgroundImage:
-                "linear-gradient(#F2F3F5 1px, transparent 1px), linear-gradient(90deg, #F2F3F5 1px, transparent 1px)",
+                "linear-gradient(currentColor 1px, transparent 1px), linear-gradient(90deg, currentColor 1px, transparent 1px)",
               backgroundSize: "40px 40px",
             }}
           />

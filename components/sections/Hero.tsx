@@ -6,7 +6,7 @@ export default function Hero() {
       {/* Декоративное свечение лаймом в углу — не киберпанк, а мягкий акцент */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-40 right-0 h-120 w-120 rounded-full bg-accent/10 blur-[120px]"
+        className="pointer-events-none absolute -top-40 right-0 h-[480px] w-[480px] rounded-full bg-accent/15 blur-[120px]"
       />
 
       <div className="relative mx-auto max-w-7xl px-6 pt-24 pb-32 md:pt-32 md:pb-40">

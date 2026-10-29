@@ -8,7 +8,7 @@ export default function CTA() {
           {/* Мягкое свечение лаймом */}
           <div
             aria-hidden
-            className="pointer-events-none absolute -right-20 -top-20 h-80 w-80 rounded-full bg-accent/10 blur-[100px]"
+            className="pointer-events-none absolute -right-20 -top-20 h-80 w-80 rounded-full bg-accent/15 blur-[100px]"
           />
 
           <div className="relative max-w-2xl">

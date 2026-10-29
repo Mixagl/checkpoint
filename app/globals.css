@@ -1,27 +1,28 @@
 @import "tailwindcss";
 
 /* ============ ДИЗАЙН-ТОКЕНЫ CHECKPOINT ============ */
+
 @theme {
   /* Фоны */
-  --color-bg: #0e0f12; /* основной фон */
-  --color-surface: #16181d; /* карточки */
-  --color-surface-2: #1c1f26; /* hover-состояния */
+  --color-bg: #ffffff; /* белый фон */
+  --color-surface: #f5f6f8; /* светло-серые карточки */
+  --color-surface-2: #eceef2;
 
   /* Текст */
-  --color-fg: #f2f3f5; /* основной */
-  --color-muted: #9ca3af; /* вторичный */
+  --color-fg: #0f1115; /* почти чёрный */
+  --color-muted: #6b7280; /* серый */
 
-  /* Акцент — лайм */
-  --color-accent: #a3e635;
-  --color-accent-soft: #a3e6351a; /* 10% прозрачности для подложек */
+  /* Акцент — индиго, как у Сотки */
+  --color-accent: #4f46e5;
+  --color-accent-soft: #4f46e51a;
 
   /* Границы */
-  --color-border: #262a31;
-  --color-border-hover: #3a4048;
+  --color-border: #e5e7eb;
+  --color-border-hover: #d1d5db;
 
   /* Радиусы */
-  --radius-card: 1rem; /* 16px */
-  --radius-lg: 1.5rem; /* 24px */
+  --radius-card: 1rem;
+  --radius-lg: 1.5rem;
 
   /* Шрифт */
   --font-sans: var(--font-inter), system-ui, sans-serif;
