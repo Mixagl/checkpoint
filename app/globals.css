@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/* ============ ДИЗАЙН-ТОКЕНЫ CHECKPOINT ============ */
+@theme {
+  /* Фоны */
+  --color-bg: #0e0f12; /* основной фон */
+  --color-surface: #16181d; /* карточки */
+  --color-surface-2: #1c1f26; /* hover-состояния */
+
+  /* Текст */
+  --color-fg: #f2f3f5; /* основной */
+  --color-muted: #9ca3af; /* вторичный */
+
+  /* Акцент — лайм */
+  --color-accent: #a3e635;
+  --color-accent-soft: #a3e6351a; /* 10% прозрачности для подложек */
+
+  /* Границы */
+  --color-border: #262a31;
+  --color-border-hover: #3a4048;
+
+  /* Радиусы */
+  --radius-card: 1rem; /* 16px */
+  --radius-lg: 1.5rem; /* 24px */
+
+  /* Шрифт */
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
+/* ============ БАЗА ============ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Выделение текста — в цвет акцента */
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* Аккуратный фокус для доступности */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Тонкий скроллбар в тон теме */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-border-hover);
+}
