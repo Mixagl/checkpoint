@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { href: "/zones", label: "Зоны" },
@@ -12,6 +13,7 @@ const navItems = [
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   // Блокируем скролл body, когда открыто мобильное меню
   useEffect(() => {
@@ -45,15 +47,20 @@ export default function Header() {
 
         {/* Десктопная навигация */}
         <nav className="hidden items-center gap-8 md:flex">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-sm text-muted transition-colors hover:text-accent"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`text-sm transition-colors ${
+                  isActive ? "text-accent" : "text-muted hover:text-accent"
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* CTA (десктоп) */}
@@ -109,16 +116,23 @@ export default function Header() {
         }`}
       >
         <nav className="flex flex-col gap-1 px-6 py-4">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              onClick={() => setIsOpen(false)}
-              className="rounded-lg px-3 py-3 text-base text-muted transition-colors hover:bg-surface hover:text-fg"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setIsOpen(false)}
+                className={`rounded-lg px-3 py-3 text-base transition-colors ${
+                  isActive
+                    ? "bg-surface text-accent"
+                    : "text-muted hover:bg-surface hover:text-fg"
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
           <Link
             href="/pricing"
             onClick={() => setIsOpen(false)}
