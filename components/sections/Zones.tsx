@@ -12,6 +12,8 @@ const zones = [
       "Кресла DXRacer",
     ],
     price: "от 150 ₽",
+    image: "/images/standart-zone.jpg",
+    imageAlt: "Standart зона",
   },
   {
     name: "Premium",
@@ -23,6 +25,8 @@ const zones = [
       "Периферия Logitech, Razer, HyperX на выбор",
     ],
     price: "от 250 ₽",
+    image: "/images/premium-zone.webp",
+    imageAlt: "Premium зона",
   },
   {
     name: "VIP / Bootcamp",
@@ -34,6 +38,8 @@ const zones = [
       "Отдельные кабинки с шумоизоляцией",
     ],
     price: "от 400 ₽",
+    image: "/images/vip-zone.webp",
+    imageAlt: "VIP зона",
   },
 ];
 

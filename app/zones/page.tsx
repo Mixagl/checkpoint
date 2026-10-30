@@ -11,39 +11,42 @@ export const metadata: Metadata = {
 const zones = [
   {
     name: "Standard",
-    tag: "Базовая зона · 40 мест",
+    tag: "Базовая зона",
     seats: 40,
     specs: [
       "RTX 4060 / i5-13400F / 32GB RAM",
       'Мониторы 27" 240Hz',
-      "Игровые кресла DXRacer",
-      "Периферия на выбор: Logitech, Razer, HyperX",
+      "Кресла DXRacer",
     ],
     price: "от 150 ₽",
+    image: "/images/standart-zone.jpg",
+    imageAlt: "Standart зона",
   },
   {
     name: "Premium",
-    tag: "Продвинутая зона · 20 мест",
+    tag: "Продвинутая зона",
     seats: 20,
     specs: [
       "RTX 4070 Ti / i7-13700K / 64GB RAM",
       'Мониторы 32" 2K 270Hz',
-      "Механические клавиатуры и мыши на выбор",
-      "Кресла с поддержкой поясницы",
+      "Периферия Logitech, Razer, HyperX на выбор",
     ],
     price: "от 250 ₽",
+    image: "/images/premium-zone.webp",
+    imageAlt: "Premium зона",
   },
   {
     name: "VIP / Bootcamp",
-    tag: "Приватная зона · 10 мест",
+    tag: "Приватная зона",
     seats: 10,
     specs: [
       "RTX 4090 / i9-13900K",
       "Мониторы 360Hz + премиум-периферия",
       "Отдельные кабинки с шумоизоляцией",
-      "Идеально для скримов и буткемпов",
     ],
     price: "от 400 ₽",
+    image: "/images/vip-zone.webp",
+    imageAlt: "VIP зона",
   },
 ];
 
