@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
@@ -6,7 +7,7 @@ export default function Hero() {
       {/* Декоративное свечение лаймом в углу — не киберпанк, а мягкий акцент */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-40 right-0 h-[480px] w-[480px] rounded-full bg-accent/15 blur-[120px]"
+        className="pointer-events-none absolute -top-40 right-0 h-120 w-120 rounded-full bg-accent/15 blur-[120px]"
       />
 
       <div className="relative mx-auto max-w-7xl px-6 pt-24 pb-32 md:pt-32 md:pb-40">
@@ -63,15 +64,27 @@ export default function Hero() {
 
           {/* Правая колонка — визуальный блок */}
 
-          <div className="aspect-4/5 w-full rounded-3xl border border-border bg-surface">
-            {/* Заглушка под будущее фото. Когда появится — замените этот div на <Image /> */}
-            <div className="flex h-full flex-col justify-between p-8">
-              <div className="flex items-center justify-between text-xs text-muted">
+          <div className="relative aspect-4/5 w-full overflow-hidden rounded-3xl border border-border bg-surface">
+            <Image
+              src="/images/hero.jpg"
+              alt="Игровая зона Checkpoint: монитор, ПК и кресло"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
+
+            {/* Затемняющая подложка снизу, чтобы текст читался на любом фото */}
+            <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
+
+            {/* Лейблы поверх фото */}
+            <div className="absolute inset-0 flex flex-col justify-between p-8 text-white">
+              <div className="flex items-center justify-between text-xs">
                 <span>CHECKPOINT / ZONE_01</span>
                 <span>STANDARD</span>
               </div>
               <div>
-                <p className="text-sm text-muted">Standard Zone</p>
+                <p className="text-sm opacity-80">Standard Zone</p>
                 <p className="mt-1 text-2xl font-semibold">RTX 4060 · 240Hz</p>
               </div>
             </div>
